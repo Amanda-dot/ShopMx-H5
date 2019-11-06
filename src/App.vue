@@ -6,8 +6,17 @@
 
 <script>
 
-export default {
-}
+  export default {
+    mounted(){
+      this.init()
+    },
+    methods:{
+      init(){
+        this.$http.get('/info').then(console.log(res))
+      }
+    }
+  }
+
 </script>
 
 <style>
@@ -19,4 +28,5 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>
